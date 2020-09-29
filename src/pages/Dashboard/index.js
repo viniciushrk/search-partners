@@ -67,7 +67,7 @@ function Dashboard() {
         {inputError && <Error>{inputError}</Error>}
 
         <Repositories>
-        {repositories[0].map((repository) => (
+        {repositories.map((repository) => (
             <a key="teste" >
                 <img
                     src={repository.parceiro.logo}
