@@ -44,7 +44,7 @@ function Dashboard() {
       // setRepositories([null]);
       await setRepositories([repository]);
 
-      console.log(repositories[0].map((repository )=>{console.log(repository)}));
+      console.log(repositories.map((repository )=>{console.log(repository)}));
       setNewRepo('');
       setInputError('');
     } catch (err) {
