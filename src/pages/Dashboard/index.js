@@ -39,12 +39,11 @@ function Dashboard() {
       const response = await api.post(`location`, { cep: newRepo });
 
       const repository = response.data;
-      console.log(repository);
+     
 
       // setRepositories([null]);
       await setRepositories([repository]);
-
-      console.log(repositories[0].map((repository )=>{console.log(repository)}));
+      console.log(repositories);
       setNewRepo('');
       setInputError('');
     } catch (err) {
@@ -67,8 +66,9 @@ function Dashboard() {
         {inputError && <Error>{inputError}</Error>}
 
         <Repositories>
-        {repositories[0].map((repository) => (
+        {/* {repositories[0].map((repository) => (
             <a key="teste" >
+             { console.log(repository)}
                 <img
                     src={repository.parceiro.logo}
                     alt={repository.parceiro.name}  
@@ -77,11 +77,11 @@ function Dashboard() {
                 <strong>{repository.parceiro.alias}</strong>
                 <p>{repository.nome_centro}</p>
                 <p>Distância aproximada: {repository.distance} KM </p>
-                <p>Frete : {repository.frete} R$ </p>
+                <p>Frete: R$ {repository.frete} </p>
                 </div>
                 <FiChevronRight size={20} />
             </a>
-            ))}
+            ))} */}
         </Repositories>
       </>
     );
