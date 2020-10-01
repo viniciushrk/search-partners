@@ -65,8 +65,8 @@ function Dashboard() {
 
         {inputError && <Error>{inputError}</Error>}
 
-        <Repositories>
-        {/* {repositories[0].map((repository) => (
+        {/* <Repositories>
+        {repositories[0].map((repository) => (
             <a key="teste" >
              { console.log(repository)}
                 <img
@@ -81,8 +81,8 @@ function Dashboard() {
                 </div>
                 <FiChevronRight size={20} />
             </a>
-            ))} */}
-        </Repositories>
+            ))}
+        </Repositories> */}
       </>
     );
   }
